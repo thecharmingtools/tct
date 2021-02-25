@@ -1,0 +1,133 @@
+@font-face {
+	font-family: 'biasa';
+	src: url('../fonts/biasa.woff2') format('woff2');
+	font-weight: normal;
+}
+
+body {
+	margin: 0;
+}
+
+.content:before {
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	display: block;
+	background-image: url("../img/background.webp"), url("../img/background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+}
+
+.content {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+#box {
+	width: 60%;
+	max-width: 50em;
+	max-height: 90vh;
+	background: rgba(255,255,255,0.6);
+	border-radius: 2em;
+	content: center;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (max-device-width: 1200px) {
+	#box {
+		width: 80%;
+	}
+		
+	li {
+		margin: 0.7em auto 0.7em auto;
+	}
+}
+
+#box img {
+	width: 80%;
+	margin: 1em auto 1em auto;
+	display: block;
+	border-radius: 3em;
+	vertical-align: middle;
+	max-height: 50%;
+}
+
+
+h1, p, li, a {
+	color: #3e3e3e;
+	text-align: center;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+}
+
+h1 {
+	font-size: 6rem;
+	font-weight: 300;
+	font-family: 'biasa';
+}
+
+p {
+	font-size: 3rem;
+	margin-bottom: 0.5em;
+}
+
+ul {
+	margin-top: 0;
+	list-style: none;
+	font-size: 3em;
+	max-height: 100%;
+}
+
+ul img {
+	width: 1.5em !important;
+	height: 1.5em;
+	display: inline-block !important;
+	margin: 0 !important;
+	vertical-align: middle;
+}
+
+ul a {
+	text-decoration: none;
+	margin-left: 0.2em;
+	display: inline-block;
+	line-height: 1.5em;
+	vertical-align: middle;
+}
+
+@media screen and (max-height: 1100px) {
+	ul {
+		font-size: 2em;
+	}
+
+	p {
+		font-size: 2em;
+		margin-top: 0.5em;
+	}
+
+	h1 {
+		margin: 0.2em auto 0.2em auto;
+		font-size: 4em;
+	}
+
+	#box img {
+		max-height: 10em;
+		width: auto;
+	}
+}
