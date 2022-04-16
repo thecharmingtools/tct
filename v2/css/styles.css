@@ -10,6 +10,14 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+@font-face {
+  font-family: 'Biasa';
+  src: url('../../fonts/biasa.woff2') format('woff2');
+  font-weight: normal;
+}
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11610,7 +11618,7 @@ header.masthead h1, header.masthead .h1 {
 /* Element | file:///C:/Users/PiBS/Programmieren/tct/pure/index.html?subscribed#spotlight */
 
 .navbar-brand {
-  font-family: "Biasa;,serif
+  font-family: "Biasa",serif;
     font-size: 1.4rem;
     letter-spacing: 0.009em;
     padding-bottom: 0;
