@@ -11668,7 +11668,8 @@ h1.text-white {
 }
 
 .yt-spotlight {
-  height: 20em;
+  height: calc(100vw/16*9);
+  max-height: 20em;
 }
 
 .yt-spotlight > iframe {
