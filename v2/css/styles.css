@@ -11520,11 +11520,13 @@ header.masthead h1, header.masthead .h1 {
     display: flex;
     flex-direction: column;
     align-self: end;
+    -webkit-align-self: end;
 }
 
 .gallery-element {
     padding: 1em;
     align-self: end;
+    -webkit-align-self: end;
 }
 
 .bi-soundcloud {
