@@ -11597,10 +11597,18 @@ header.masthead h1, header.masthead .h1 {
         transition-duration: 1.3s;
         background-color: #e8ddb5;
     }
+
+  .showcase > .container-fluid {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .showcase-yt {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
 }
-
-
-
 
 /* styles.css | file:///C:/Users/PiBS/Programmieren/tct/pure/css/styles.css */
 
@@ -11684,7 +11692,7 @@ h1.text-white {
 
 .yt-spotlight {
   height: calc(100vw/16*9);
-  max-height: 20em;
+  max-height: 19em;
   padding: 1em;
 }
 
@@ -11715,7 +11723,7 @@ html {
   color: white;
 }
 
-@media (max-width: 992px)  {
+@media (max-width: 992px) {
   #tct-masthead-container {
     visibility: hidden;
   }
