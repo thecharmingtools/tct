@@ -11592,6 +11592,8 @@ header.masthead h1, header.masthead .h1 {
 
 @media (min-width: 992px) {
     #mainNav.navbar-shrink {
+        transition-property: background-color;
+        transition-duration: 1.3s;
         background-color: #e8ddb5;
     }
 }
