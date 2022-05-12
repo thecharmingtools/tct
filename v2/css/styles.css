@@ -11647,8 +11647,14 @@ h1.text-white {
   padding-top: 0;
 }
 
-.tct-capital {
-  font-size: 0.75em;
+.tct-capital-c {
+  /* Text has Word size 24. T has size 18 in word. So t must be 0.9166 relative to the parent */
+  font-size: 0.9166em;
+}
+
+.tct-capital-t {
+  /* Text has Word size 24. T has size 18 in word. So t must be 0.75 relative to the parent */
+  font-size: 0.75em
 }
 
 #tct-masthead {
@@ -11663,8 +11669,15 @@ h1.text-white {
   }
 }
 
-.tct-capital-masthead {
+.tct-capital-masthead-t {
+  /* Text has Word size 24. T has size 18 in word. So t must be 0.75 relative to the parent */
   font-size: 0.75em;
+  font-weight: 900 !important;
+}
+
+.tct-capital-masthead-c {
+  /* Text has Word size 24. T has size 18 in word. So t must be 0.9166 relative to the parent */
+  font-size: 0.9166em;
   font-weight: 900 !important;
 }
 
