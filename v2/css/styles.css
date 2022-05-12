@@ -11706,6 +11706,14 @@ html {
   padding: 8rem 0;
 }
 
+.sm-icon {
+  color: #6c757d
+}
+
+.sm-icon:hover {
+  color: white;
+}
+
 @media (max-width: 992px)  {
   #tct-masthead-container {
     visibility: hidden;
