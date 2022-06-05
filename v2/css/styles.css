@@ -11526,8 +11526,17 @@ header.masthead h1, header.masthead .h1 {
 
 .gallery-element {
     padding: 1em;
+  /* Doesnt Work because of safari... Needs the .push-down and .gallery-element-wrapper workaround
     align-self: end;
-    -webkit-align-self: end;
+    -webkit-align-self: end; */
+}
+
+.push-down {
+  flex: 1
+}
+
+.gallery-element-wrapper {
+  align-self: stretch;
 }
 
 .bi-soundcloud {
@@ -11714,7 +11723,6 @@ html {
   position: fixed;
 }
 
-
 .page-section {
   padding: 8rem 0;
 }
@@ -11787,6 +11795,6 @@ html {
   }
 
   .navbar-nav {
-    align-items: end;
+    align-items: flex-end;
   }
 }
