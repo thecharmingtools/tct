@@ -11520,15 +11520,16 @@ header.masthead h1, header.masthead .h1 {
 .container-gallery > div {
     display: flex;
     flex-direction: column;
-    align-self: end;
-    -webkit-align-self: end;
+  /* Doesnt Work because of safari... Needs the .push-down and .gallery-element-wrapper workaround
+   align-self: end;
+   -webkit-align-self: end; */
 }
 
 .gallery-element {
-    padding: 1em;
-  /* Doesnt Work because of safari... Needs the .push-down and .gallery-element-wrapper workaround
-    align-self: end;
-    -webkit-align-self: end; */
+   padding: 1em;
+ /* Doesnt Work because of safari... Needs the .push-down and .gallery-element-wrapper workaround
+   align-self: end;
+   -webkit-align-self: end; */
 }
 
 .push-down {
