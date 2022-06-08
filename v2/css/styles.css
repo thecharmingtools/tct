@@ -11863,7 +11863,7 @@ html {
     text-decoration: none;
     font-size: 2em;
     display: inline-block;
-    margin-top: 1.25em;
+    margin-top: 1.0em;
     transition: color 0.2s ease-in-out;
     letter-spacing: 1px;
   }
@@ -11871,7 +11871,7 @@ html {
   .hamburger-nav-wrapper ul {
     list-style: none;
     padding-left: 0;
-    padding-top: 100px;
+    padding-top: 150px;
   }
 
   .hamburger-nav-wrapper li {
