@@ -11861,7 +11861,6 @@ html {
   .hamburger-nav li {
     position: relative;
     text-decoration: none;
-    color: #6ecddd;
     font-size: 2em;
     display: inline-block;
     margin-top: 1.25em;
@@ -11880,6 +11879,10 @@ html {
     text-align: center;
   }
 
+  .hamburger-nav .nav-link {
+    color: black
+  }
+
   /**
   Animations
   **/
@@ -11895,7 +11898,7 @@ html {
   }
   #toggle:checked + .hamburger .meat {
     transform: rotate(45deg);
-    margin-top: -7px;
+    margin-top: -6px;
     background-color: black;
   }
 
