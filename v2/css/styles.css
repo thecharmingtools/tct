@@ -4068,6 +4068,7 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
+  z-index: 100;
 }
 .navbar-nav {
   display: flex;
@@ -4093,6 +4094,7 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .navbar-toggler {
@@ -11736,6 +11738,12 @@ html {
   color: white;
 }
 
+@media(min-width: 993px) {
+  #mobile-navigation {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   #tct-masthead-container {
     visibility: hidden;
@@ -11798,4 +11806,106 @@ html {
   .navbar-nav {
     align-items: flex-end;
   }
+
+  /**
+    Hamburger
+  **/
+  .hamburger {
+    position: absolute;
+    top: 4em;
+    right: 5%;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 2em;
+    height: 45px;
+    z-index: 5;
+  }
+
+  .hamburger div {
+    position: relative;
+    width: 2em;
+    height: 5px;
+    border-radius: 3px;
+    background-color: white;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-shrink .hamburger div {
+    background-color: black;
+  }
+
+  /**
+  Nav Styles
+  **/
+
+  .hamburger-nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #e8ddb5;
+    top: -100%; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+  }
+  .hamburger-nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .hamburger-nav {
+    text-align: left;
+  }
+  .hamburger-nav li {
+    position: relative;
+    text-decoration: none;
+    color: #6ecddd;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+  }
+
+  .hamburger-nav-wrapper ul {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 100px;
+  }
+
+  .hamburger-nav-wrapper li {
+    width: 100vw;
+    text-align: center;
+  }
+
+  /**
+  Animations
+  **/
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+    background-color: black;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+    background-color: black;
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+    background-color: black;
+  }
+
+  #toggle:checked + .hamburger + .hamburger-nav {
+    top: 0;
+    transform: scale(1);
+  }
+
+  #toggle {
+    display: none;
+  }
+
 }

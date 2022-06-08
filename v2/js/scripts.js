@@ -52,3 +52,7 @@ function changeMobileMenuVisibility() {
         menu.classList.add("show")
     }
 }
+
+function hideHamburger() {
+    document.getElementById("toggle").checked = false
+}
