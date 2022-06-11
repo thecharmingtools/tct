@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', event => {
 function changeMobileMenuVisibility() {
     let menu = document.getElementById("navbarResponsive");
 
-    if(menu.classList.contains("show")) {
+    if (menu.classList.contains("show")) {
         menu.classList.remove("show")
     } else {
         menu.classList.add("show")
@@ -55,4 +55,17 @@ function changeMobileMenuVisibility() {
 
 function hideHamburger() {
     document.getElementById("toggle").checked = false
+}
+
+function handleHamburgerMenuChanged(input) {
+    const navbarCollapsible = document.body.querySelector('#mainNav');
+    if (!navbarCollapsible) {
+        return;
+    }
+
+    if (input.checked) {
+        navbarCollapsible.classList.add('navbar-shrink')
+    } else if (window.scrollY <= 200) {
+        navbarCollapsible.classList.remove('navbar-shrink')
+    }
 }
