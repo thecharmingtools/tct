@@ -53,8 +53,9 @@ function changeMobileMenuVisibility() {
     }
 }
 
-function hideHamburger() {
+function hideHamburger(destination) {
     document.getElementById("toggle").checked = false
+    plausible('Menu-Click', {props: {destination: destination, mode: 'Mobile'}})
 }
 
 function handleHamburgerMenuChanged(input) {
@@ -65,6 +66,7 @@ function handleHamburgerMenuChanged(input) {
 
     if (input.checked) {
         navbarCollapsible.classList.add('navbar-shrink')
+        plausible('Open-Mobile-Menu')
     } else if (window.scrollY <= 200) {
         navbarCollapsible.classList.remove('navbar-shrink')
     }
