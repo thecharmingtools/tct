@@ -11822,13 +11822,29 @@ html {
   }
 
   .hamburger div {
-    position: relative;
+    position: absolute;
     width: 2em;
     height: 5px;
     border-radius: 3px;
     background-color: white;
     margin-top: 8px;
     transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger .top-bun {
+    top: 20%;
+    margin-top: 0;
+  }
+
+  .hamburger .meat {
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+  }
+
+  .hamburger .bottom-bun {
+    bottom: 20%;
+    margin-top: 0;
   }
 
   .navbar-shrink .hamburger div {
@@ -11838,6 +11854,11 @@ html {
   /**
   Nav Styles
   **/
+
+  #mobile-navigation {
+    height: 48px;
+    width: 2em;
+  }
 
   .hamburger-nav {
     position: fixed;
@@ -11888,17 +11909,19 @@ html {
   **/
   #toggle:checked + .hamburger .top-bun {
     transform: rotate(-45deg);
-    margin-top: 25px;
+    top: 50%;
     background-color: black;
   }
   #toggle:checked + .hamburger .bottom-bun {
-    opacity: 0;
+    opacity: 1;
+    top: 50%;
     transform: rotate(45deg);
     background-color: black;
   }
   #toggle:checked + .hamburger .meat {
+    opacity: 0;
     transform: rotate(45deg);
-    margin-top: -6px;
+    top: 50%;
     background-color: black;
   }
 
