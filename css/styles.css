@@ -11863,7 +11863,7 @@ html {
     text-decoration: none;
     font-size: 2em;
     display: inline-block;
-    margin-top: 1.0em;
+    margin-top: 0.45em;
     transition: color 0.2s ease-in-out;
     letter-spacing: 1px;
   }
