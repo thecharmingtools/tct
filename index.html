@@ -7,7 +7,9 @@
     <meta name="author" content=""/>
     <title>The Charming Tools</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
     <!-- Google fonts-->
@@ -19,7 +21,7 @@
     <script>
         window.onload = () => {
             if(window.location.search.includes("subscribed")) {
-                let alert = document.getElementById("hoi")
+                let alert = document.getElementById("subscribed-alert")
                 alert.style.display = "block";
 
                 setTimeout(() => {
@@ -69,7 +71,7 @@
 <!-- Masthead-->
 
 <header class="masthead">
-    <div class="alert alert-success text-center" role="alert" id="hoi"  style="display: none">
+    <div class="alert alert-success text-center" role="alert" id="subscribed-alert"  style="display: none">
         Thanks for subscribing to the mailing list! Keep vibing 🎵
     </div>
     <div class="container px-4 px-lg-5 h-100" id="tct-masthead-container">
