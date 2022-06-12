@@ -23,6 +23,7 @@
             if(window.location.search.includes("subscribed")) {
                 let alert = document.getElementById("subscribed-alert")
                 alert.style.display = "block";
+                plausible('Newsletter-Subscribed')
 
                 setTimeout(() => {
                     alert.style.display = "none";
