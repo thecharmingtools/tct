@@ -32,10 +32,6 @@
                 let alert = document.getElementById("subscribed-alert")
                 alert.style.display = "block";
                 plausible('Newsletter-Subscribed')
-
-                setTimeout(() => {
-                    alert.style.display = "none";
-                }, 6000)
             }
         }
     </script>
@@ -81,9 +77,6 @@
 <!-- Masthead-->
 
 <header class="masthead">
-    <div class="alert alert-success text-center" role="alert" id="subscribed-alert"  style="display: none">
-        Thanks for subscribing to the mailing list! Keep vibing 🎵
-    </div>
     <div class="container px-4 px-lg-5 h-100" id="tct-masthead-container">
         <div class="row gx-4 gx-lg-5 h-75 align-items-center justify-content-center align-content-end text-center">
             <div class="col-lg-8 align-self-end d-hidden d-md-block">
@@ -94,6 +87,14 @@
         </div>
     </div>
 </header>
+<div id="subscribed-alert-background" onclick="closeSubscribedAlert()">
+    <div class="alert text-center" role="alert" id="subscribed-alert"  style="display: none">
+        <div id="subscribed-alert-close" onclick="closeSubscribedAlert()" title="close">
+        </div>
+        <p id="header">Thanks for subscribing!</p><p> Check your inbox (or Spam-folder) to get a little surprise 😉</p>
+    </div>
+</div>
+
 <!-- About-->
 <section class="page-section bg-primary" id="mailinglist">
     <div class="container px-4 px-lg-5">

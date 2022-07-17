@@ -71,3 +71,10 @@ function handleHamburgerMenuChanged(input) {
         navbarCollapsible.classList.remove('navbar-shrink')
     }
 }
+
+function closeSubscribedAlert() {
+    let alert = document.getElementById("subscribed-alert")
+    let alertBackground = document.getElementById("subscribed-alert-background")
+    alert.style.display = "none";
+    alertBackground.style.display = "none";
+}
