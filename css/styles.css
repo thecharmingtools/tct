@@ -11746,6 +11746,7 @@ html {
   height: 40vh;
   width: 90vw;
   background-color: #e8ddb5;
+  transition:width, height 0.3s linear;
 }
 
 #subscribed-alert #header {
@@ -11766,6 +11767,7 @@ html {
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.5);
+  transition: visibility 0.2s linear;
 }
 
 

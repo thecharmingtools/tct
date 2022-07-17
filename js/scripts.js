@@ -75,6 +75,16 @@ function handleHamburgerMenuChanged(input) {
 function closeSubscribedAlert() {
     let alert = document.getElementById("subscribed-alert")
     let alertBackground = document.getElementById("subscribed-alert-background")
-    alert.style.display = "none";
-    alertBackground.style.display = "none";
+    for( child of alert.children) {
+        console.log(child)
+        child.style.display = "none"
+    }
+
+    alert.style.width = "10px"
+    alert.style.height = "10px"
+
+    setTimeout(() => {
+        alert.style.visibility = "hidden";
+        alertBackground.style.visibility = "hidden";
+    }, 300)
 }
