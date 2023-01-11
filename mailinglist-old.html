@@ -89,18 +89,6 @@
             border-style: solid;
         }
 
-        #submit-btn {
-            color: #ffffff !important;
-            background-color: #226f54 !important;
-            cursor: pointer;
-        }
-
-        #submit-btn:disabled {
-            color: #00000054 !important;
-            background-color: #f8f8f8a1 !important;
-            cursor: initial;
-        }
-
         @media (min-width: 992px) {
             #sib-container {
                 border-color: #fafbfc;
@@ -108,7 +96,7 @@
         }
 
         @media (max-width: 992px) {
-            #submit-btn {
+            #submit-button {
                 width: 100%;
                 text-align: center;
             }
@@ -116,31 +104,6 @@
 
     </style>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    <script>
-        function submitFormAndNavigate() {
-            let mailInput = document.getElementById('EMAIL');
-            let mailaddress = mailInput.value;
-            let firstNameInput = document.getElementById('VORNAME');
-            let firstName = firstNameInput.value;
-            window.location.href = `/mailinglist-mobile.html?mail=${mailaddress}&firstname=${firstName}`;
-        }
-
-        function validateEmail() {
-            let signUpButton = document.getElementById('submit-btn')
-            let mailInput = document.getElementById('sms');
-            let mailaddress = mailInput.value;
-
-            let mailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-            let isValidMailAddress = mailRegex.test(mailaddress);
-
-            if(isValidMailAddress) {
-                signUpButton.disabled = false
-            } else {
-                signUpButton.disabled = true
-            }
-        }
-    </script>
     <script defer data-domain="thecharmingtools.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
 <body>
@@ -198,8 +161,24 @@
                             <div class="form__label-row ">
 
                                 <div class="entry__field">
-                                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
-                                           oninput="validateEmail()"
+                                    <input class="input" maxlength="200" type="text" id="VORNAME" name="VORNAME"
+                                           autocomplete="off" placeholder="FIRST NAME"/>
+                                </div>
+                            </div>
+
+                            <label class="entry__error entry__error--primary"
+                                   style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 3px 0;">
+                    <div class="sib-input sib-form-block">
+                        <div class="form__entry entry_block">
+                            <div class="form__label-row ">
+
+                                <div class="entry__field">
+                                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off"
                                            placeholder="EMAIL*" data-required="true" required/>
                                 </div>
                             </div>
@@ -210,25 +189,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding: 3px 0; display: initial;">
-                    <div class="sib-input sib-form-block">
-                        <div class="form__entry entry_block">
-                            <div class="form__label-row ">
-
-                                <div class="entry__field">
-                                    <input class="input" maxlength="200" type="text" id="VORNAME" name="VORNAME"
-                                           autocomplete="off" placeholder="FIRST NAME (optional)"/>
-                                </div>
-                            </div>
-
-                            <label class="entry__error entry__error--primary"
-                                   style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="padding: 7px 0 8px; display: none;">
+                <div style="padding: 7px 0 8px;">
                     <div class="sib-sms-field sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
@@ -1018,12 +979,12 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding: 8px 0; display: none;">
+                <div style="padding: 8px 0;">
                     <div class="sib-form-block sib-divider-form-block">
                         <div style="border: 0; border-bottom: 1px solid #E5EDF6"></div>
                     </div>
                 </div>
-                <div style="padding: 8px 0; display: none;">
+                <div style="padding: 8px 0;">
                     <div class="sib-checkbox-group sib-form-block">
                         <div class="form__entry entry_mcq">
                             <div class="form__label-row ">
@@ -1046,10 +1007,10 @@
                     </div>
                 </div>
                 <div style="padding: 8px 0;">
-                    <div class="sib-form-block" style="text-align: center">
-                        <button class="sib-form-block__button sib-form-block__button-with-loader" disabled=""
+                    <div class="sib-form-block" style="text-align: right">
+                        <button class="sib-form-block__button sib-form-block__button-with-loader"
                                 style="font-size:16px; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#000000; background-color:#f9f9f9; border-radius:3px; border-width:0px;"
-                                form="sib-form" type="submit" id="submit-btn" onclick="submitFormAndNavigate()">
+                                form="sib-form" type="submit" id="submit-button">
 
                             <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
                                  viewBox="0 0 512 512">
@@ -1058,7 +1019,7 @@
                             SIGN UP
                         </button>
                         <div class="sib-text-form-block"
-                             style="font-size:12px; text-align:center; font-family:&quot;Helvetica&quot;, sans-serif; color:#ffffff; background-color:transparent; margin-top: 10px">
+                             style="font-size:12px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#ffffff; background-color:transparent; margin-top: 10px">
                             <p>You can unsubscribe at any time and we promise we won't spam you ;)</p>
                         </div>
 

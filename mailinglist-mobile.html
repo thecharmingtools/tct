@@ -108,7 +108,7 @@
         }
 
         @media (max-width: 992px) {
-            #submit-btn {
+            #submit-button {
                 width: 100%;
                 text-align: center;
             }
@@ -117,29 +117,17 @@
     </style>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <script>
-        function submitFormAndNavigate() {
+        window.onload = () => {
+            let params = new URLSearchParams(document.location.search);
+            let mail = params.get("mail");
+            let name = params.get("firstname");
             let mailInput = document.getElementById('EMAIL');
-            let mailaddress = mailInput.value;
-            let firstNameInput = document.getElementById('VORNAME');
-            let firstName = firstNameInput.value;
-            window.location.href = `/mailinglist-mobile.html?mail=${mailaddress}&firstname=${firstName}`;
+            mailInput.value = mail;
+
+            let firstName = document.getElementById('VORNAME');
+            firstName.value = name;
         }
 
-        function validateEmail() {
-            let signUpButton = document.getElementById('submit-btn')
-            let mailInput = document.getElementById('sms');
-            let mailaddress = mailInput.value;
-
-            let mailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-            let isValidMailAddress = mailRegex.test(mailaddress);
-
-            if(isValidMailAddress) {
-                signUpButton.disabled = false
-            } else {
-                signUpButton.disabled = true
-            }
-        }
     </script>
     <script defer data-domain="thecharmingtools.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
@@ -182,8 +170,7 @@
                     <div class="sib-form-block"
                          style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#ffffff; background-color:transparent;">
                         <div class="sib-text-form-block">
-                            <p>Sign up to our mailing list to be the first to hear about new releases and more from The
-                                Charming Tools.</p>
+                            <p>Thanks for subscribing! Would you like to receive SMS when we release a new song?</p>
                         </div>
                     </div>
                 </div>
@@ -192,14 +179,30 @@
                         <div style="border: 0; border-bottom: 1px solid #E5EDF6"></div>
                     </div>
                 </div>
-                <div style="padding: 3px 0;">
+                <div style="padding: 3px 0; display: none;">
                     <div class="sib-input sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
 
                                 <div class="entry__field">
-                                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="off"
-                                           oninput="validateEmail()"
+                                    <input class="input" maxlength="200" type="text" id="VORNAME" name="VORNAME"
+                                           autocomplete="off" placeholder="FIRST NAME"/>
+                                </div>
+                            </div>
+
+                            <label class="entry__error entry__error--primary"
+                                   style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 3px 0; display: none;">
+                    <div class="sib-input sib-form-block">
+                        <div class="form__entry entry_block">
+                            <div class="form__label-row ">
+
+                                <div class="entry__field">
+                                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off"
                                            placeholder="EMAIL*" data-required="true" required/>
                                 </div>
                             </div>
@@ -210,25 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding: 3px 0; display: initial;">
-                    <div class="sib-input sib-form-block">
-                        <div class="form__entry entry_block">
-                            <div class="form__label-row ">
-
-                                <div class="entry__field">
-                                    <input class="input" maxlength="200" type="text" id="VORNAME" name="VORNAME"
-                                           autocomplete="off" placeholder="FIRST NAME (optional)"/>
-                                </div>
-                            </div>
-
-                            <label class="entry__error entry__error--primary"
-                                   style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="padding: 7px 0 8px; display: none;">
+                <div style="padding: 7px 0 8px;">
                     <div class="sib-sms-field sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
@@ -991,8 +976,8 @@
                                             </select>
                                         </div>
                                         <div class="entry__field" style="width: 100%">
-                                            <input type="tel" type="text" class="input" id="SMS" name="SMS"
-                                                   autocomplete="off" placeholder="**********"/>
+                                            <input type="tel"  class="input" id="SMS" name="SMS"
+                                                   autocomplete="off" placeholder="**********" oninput="validatePhone()"/>
                                         </div>
                                     </div>
                                     <div class="sib-sms-tooltip">
@@ -1032,7 +1017,7 @@
                                         <label class="checkbox__label">
                                             <input type="checkbox" class="input_replaced" name="lists_38[]"
                                                    data-value="I would like to receive SMS release updates from The Charming Tools."
-                                                   value="6"/>
+                                                   value="6" checked/>
                                             <span class="checkbox checkbox_tick_positive"></span><span
                                                 style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#fdfdfd; background-color:transparent;">I would like to receive SMS release updates from The Charming Tools.</span>
                                         </label>
@@ -1047,9 +1032,19 @@
                 </div>
                 <div style="padding: 8px 0;">
                     <div class="sib-form-block" style="text-align: center">
-                        <button class="sib-form-block__button sib-form-block__button-with-loader" disabled=""
+                        <button class="sib-form-block__button sib-form-block__button-with-loader"
                                 style="font-size:16px; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#000000; background-color:#f9f9f9; border-radius:3px; border-width:0px;"
-                                form="sib-form" type="submit" id="submit-btn" onclick="submitFormAndNavigate()">
+                                form="sib-form" id="cancel-button" onclick="window.location = 'https://thecharmingtools.com'">
+
+                            <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                                 viewBox="0 0 512 512">
+                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
+                            </svg>
+                            Cancel
+                        </button>
+                        <button class="sib-form-block__button sib-form-block__button-with-loader"
+                                style="font-size:16px; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#000000; background-color:#f9f9f9; border-radius:3px; border-width:0px;"
+                                form="sib-form" type="submit" id="submit-btn">
 
                             <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
                                  viewBox="0 0 512 512">
