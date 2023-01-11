@@ -11707,13 +11707,14 @@ h1.text-white {
 }
 
 .yt-spotlight {
-  height: calc(100vw/16*9);
-  max-height: 19em;
+  max-height: 19rem;
   padding: 1em;
+  aspect-ratio: 16/9;
 }
 
 .yt-spotlight > iframe {
-  max-width: 40em;
+  max-width: calc((19rem/9)*16);
+  aspect-ratio: 16/9;
 }
 
 html {
