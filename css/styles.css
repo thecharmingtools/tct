@@ -11712,7 +11712,11 @@ h1.text-white {
   padding: 1em;
 }
 
-.yt-spotlight > iframe {
+.yt-spotlight-iframe-wrapper {
+    aspect-ratio: 16/9;
+}
+
+.yt-spotlight  iframe {
   max-width: 40em;
 }
 
