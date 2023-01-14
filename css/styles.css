@@ -11714,6 +11714,9 @@ h1.text-white {
 
 .yt-spotlight-iframe-wrapper {
     aspect-ratio: 16/9;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }
 
 .yt-spotlight  iframe {
