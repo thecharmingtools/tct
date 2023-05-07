@@ -1,0 +1,22 @@
+{
+  "nextDates": [
+    {
+      "active": false,
+      "date": "2023-11-03",
+      "time": "20:00",
+      "venue": "Testlocation",
+      "street": "Musterweg 1",
+      "zip":"1234",
+      "city": "Bern"
+    },
+    {
+      "active": false,
+      "date": "2024-12-03",
+      "time": "20:00",
+      "venue": "Another ONE",
+      "street": "Musterweg 1",
+      "zip":"1234",
+      "city": "Bern"
+    }
+  ]
+}

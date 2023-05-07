@@ -11816,6 +11816,23 @@ html {
   right: 0;
 }
 
+#dates {
+  background-color: #e8ddb5;
+}
+
+#dates-hr {
+  width: 50vw;
+  height: 2px;
+  background-color: rgba(var(--bs-primary-rgb));
+  border-radius: 1px;
+  margin-bottom: 1rem
+}
+
+#dates-list {
+  max-width: 60vw;
+  list-style: none;
+}
+
 @media(min-width: 993px) {
   #mobile-navigation {
     display: none;
@@ -12053,5 +12070,13 @@ html {
     position: absolute;
     right: 0;
     z-index: 55;
+  }
+
+  #dates-hr {
+    width: 90vw;
+  }
+
+  #dates-list {
+    max-width: 85vw;
   }
 }

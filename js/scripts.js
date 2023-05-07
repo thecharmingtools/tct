@@ -88,3 +88,40 @@ function closeSubscribedAlert() {
         alertBackground.style.visibility = "hidden";
     }, 300)
 }
+
+window.onload = async () => {
+    fetch('/data/liveDates.json').then(response => response.json()).then(
+        async result => {
+            if(result.nextDates.filter(date => date.active).length == 0) {
+                let datesSection = document.getElementById('dates');
+                datesSection.style.display = 'none';
+            }
+
+            for (let concert of result.nextDates) {
+                setupLiveDate(concert)
+            }
+        }
+    )
+}
+
+function setupLiveDate(concert) {
+    let dateListItem = document.createElement('li');
+    let dateItem = document.createElement('div')
+    let horizontalLineListItem = document.createElement('li')
+    let horizontalLine = document.createElement('hr')
+
+    let formattedDate = new Date(Date.parse(concert.date)).toLocaleDateString("de-DE")
+
+    let locationString = `${formattedDate}, ${concert.time} | <b>${concert.venue}</b> | ${concert.street}, ${concert.zip} ${concert.city}`;
+
+    dateItem.innerHTML = locationString;
+    dateListItem.append(dateItem);
+
+    horizontalLineListItem.append(horizontalLine);
+
+    document.getElementById('dates-list').append(dateListItem, horizontalLineListItem);
+}
+
+function loadJsonFile(location) {
+
+}
