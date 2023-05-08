@@ -14,9 +14,9 @@
       "date": "2023-05-23",
       "time": "18:30",
       "venue": "Swissrail Mobility Day",
-      "street": "Trafohallen Baden",
+      "street": "",
       "zip":"",
-      "city": ""
+      "city": "Trafohallen Baden"
     },
     {
       "active": true,
@@ -31,19 +31,19 @@
       "active": true,
       "date": "2023-06-16",
       "time": "19:30",
-      "venue": "PH-Sommernachtsfest",
-      "street": "Gaskessel Bern",
+      "venue": "Sommernachtsfest",
+      "street": "",
       "zip":"",
-      "city": ""
+      "city": "Gaskessel Bern"
     },
     {
       "active": true,
       "date": "2023-07-02",
       "time": "09:30",
       "venue": "Reithallen-Flohmi",
-      "street": "Reitschule Bern",
+      "street": "",
       "zip":"",
-      "city": ""
+      "city": "Reitschule Bern"
     },
     {
       "active": true,
@@ -53,6 +53,16 @@
       "street": "Weissenbühlquartier",
       "zip":"",
       "city": "Bern"
-    }
+    },
+    {
+      "active": true,
+      "date": "2023-10-27",
+      "time": "20:00",
+      "venue": "Alti Moschti",
+      "street": "",
+      "zip":"",
+      "city": "Mühlethurnen"
+    },
+    {
   ]
 }
