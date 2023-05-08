@@ -1,22 +1,57 @@
 {
   "nextDates": [
     {
-      "active": false,
-      "date": "2023-11-03",
-      "time": "20:00",
-      "venue": "Testlocation",
-      "street": "Musterweg 1",
-      "zip":"1234",
+      "active": true,
+      "date": "2023-05-14",
+      "time": "13:00",
+      "venue": "Das Gartenfest",
+      "street": "(privat)",
+      "zip":"",
       "city": "Bern"
     },
     {
-      "active": false,
-      "date": "2024-12-03",
+      "active": true,
+      "date": "2023-05-23",
+      "time": "18:30",
+      "venue": "Swissrail Mobility Day",
+      "street": "Trafohallen Baden",
+      "zip":"",
+      "city": ""
+    },
+    {
+      "active": true,
+      "date": "2023-05-26",
       "time": "20:00",
-      "venue": "Another ONE",
-      "street": "Musterweg 1",
-      "zip":"1234",
+      "venue": "Tag der Nachbarschaft",
+      "street": "Effingerquartier",
+      "zip":"",
       "city": "Bern"
-    }
+    },
+    {
+      "active": true,
+      "date": "2023-06-16",
+      "time": "19:30",
+      "venue": "PH-Sommernachtsfest",
+      "street": "Gaskessel Bern",
+      "zip":"",
+      "city": ""
+    },
+    {
+      "active": true,
+      "date": "2023-07-02",
+      "time": "09:30",
+      "venue": "Reithallen-Flohmi",
+      "street": "Reitschule Bern",
+      "zip":"",
+      "city": ""
+    },
+    {
+      "active": true,
+      "date": "2023-07-29",
+      "time": "20:00",
+      "venue": "KulturMatte",
+      "street": "Weissenbühlquartier",
+      "zip":"",
+      "city": "Bern"
   ]
 }
