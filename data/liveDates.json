@@ -4,64 +4,57 @@
       "active": true,
       "date": "2023-05-14",
       "time": "13:00",
-      "venue": "Das Gartenfest",
-      "street": "(privat)",
-      "zip":"",
-      "city": "Bern"
+      "eventName": "Das Gartenfest",
+      "location": "(privat), Bern",
+      "link": ""
     },
     {
       "active": true,
       "date": "2023-05-23",
       "time": "18:30",
-      "venue": "Swissrail Mobility Day",
-      "street": "Trafohalle",
-      "zip":"",
-      "city": "Baden"
+      "eventName": "Swissrail Mobility Day",
+      "location": "Trafohalle Baden",
+      "link": ""
     },
     {
       "active": true,
       "date": "2023-05-26",
       "time": "20:00",
-      "venue": "Tag der Nachbarschaft",
-      "street": "Effingerquartier",
-      "zip":"",
-      "city": "Bern"
+      "eventName": "Tag der Nachbarschaft",
+      "location": "Effingerquartier, Bern",
+      "link": ""
     },
     {
       "active": true,
       "date": "2023-06-16",
       "time": "19:30",
-      "venue": "Sommernachtsfest",
-      "street": "Gaskessel",
-      "zip":"",
-      "city": "Bern"
+      "eventName": "Sommernachtsfest",
+      "location": "Gaskessel, Bern",
+      "link": ""
     },
     {
       "active": true,
       "date": "2023-07-02",
       "time": "09:30",
-      "venue": "Reithallen-Flohmi",
-      "street": "Reitschule",
-      "zip":"",
-      "city": "Bern"
+      "eventName": "Reithallen-Flohmi",
+      "location": "Reitschule, Bern",
+      "link": ""
     },
     {
       "active": true,
       "date": "2023-07-29",
       "time": "20:00",
-      "venue": "KulturMatte",
-      "street": "Weissenbühlquartier",
-      "zip":"",
-      "city": "Bern"
+      "eventName": "KulturMatte",
+      "location": "Weissenbühlquartier, Bern",
+      "link": ""
     },
     {
       "active": true,
       "date": "2023-10-27",
       "time": "20:00",
-      "venue": "Alti Moschti",
-      "street": "",
-      "zip":"",
-      "city": "Mühlethurnen"
+      "eventName": "Alti Moschti",
+      "location": "Mühleturnen",
+      "link": ""
     }
   ]
 }

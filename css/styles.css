@@ -11309,6 +11309,8 @@ html {
 body {
   width: 100%;
   height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 
@@ -11665,6 +11667,11 @@ h1.text-white {
     font-style: normal;
 }
 
+
+a {
+  color: black;
+}
+
 #tct-header {
   font-family: "Biasa", serif !important;
   font-size: 2em;
@@ -11833,6 +11840,10 @@ html {
   list-style: none;
 }
 
+#dates-list > li:last-child {
+  display: none;
+}
+
 @media(min-width: 993px) {
   #mobile-navigation {
     display: none;
@@ -11841,6 +11852,18 @@ html {
   #subscribed-alert {
     height: 20em;
     width: 30em;
+  }
+
+  #dates-list > .concert {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .concert-part-1:after, .concert-part-2:after {
+    content: '';
+    margin-left: 1rem;
+    border-left: 1px solid black;
   }
 }
 
@@ -12078,5 +12101,9 @@ html {
 
   #dates-list {
     max-width: 85vw;
+  }
+
+  #spotlight {
+    padding-top: 1rem;
   }
 }

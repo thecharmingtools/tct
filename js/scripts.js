@@ -105,21 +105,41 @@ window.onload = async () => {
 }
 
 function setupLiveDate(concert) {
-    let dateListItem = document.createElement('li');
+    let formattedDate = new Date(Date.parse(concert.date)).toLocaleDateString("de-DE");
+    let liveDateItem = document.createElement('li');
+    liveDateItem.classList.add('concert');
+
     let dateItem = document.createElement('div')
+    dateItem.innerHTML = `${formattedDate}, ${concert.time}`
+    dateItem.classList.add('concert-part-1');
+
+    let eventListItem = document.createElement('li');
+    let eventItem;
+    if(concert.link != "") {
+        eventItem = document.createElement('a');
+        eventItem.href = concert.link;
+    } else {
+        eventItem = document.createElement('div')
+    }
+    eventItem.innerText = concert.eventName;
+    eventItem.style.fontWeight = "bold";
+    eventItem.classList.add('concert-part-2')
+
+    let locationListItem = document.createElement('li');
+    let locationItem = document.createElement('div')
+    locationItem.innerText = concert.location;
+    locationItem.classList.add('concert-part-3')
+
     let horizontalLineListItem = document.createElement('li')
     let horizontalLine = document.createElement('hr')
 
-    let formattedDate = new Date(Date.parse(concert.date)).toLocaleDateString("de-DE")
-
-    let locationString = `${formattedDate}, ${concert.time} | <b>${concert.venue}</b> | ${concert.street}, ${concert.zip} ${concert.city}`;
-
-    dateItem.innerHTML = locationString;
-    dateListItem.append(dateItem);
+    liveDateItem.append(dateItem);
+    liveDateItem.append(eventItem);
+    liveDateItem.append(locationItem);
 
     horizontalLineListItem.append(horizontalLine);
 
-    document.getElementById('dates-list').append(dateListItem, horizontalLineListItem);
+    document.getElementById('dates-list').append(liveDateItem, horizontalLineListItem);
 }
 
 function loadJsonFile(location) {
