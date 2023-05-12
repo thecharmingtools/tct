@@ -41,6 +41,18 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+    
+    
+    // Temporarely trying to fix the notification.
+    
+    if(window.location.search.includes("subscribed")) {
+        let alert = document.getElementById("subscribed-alert")
+        alert.style.display = "block";
+
+        let alertBackground = document.getElementById("subscribed-alert-background")
+        alertBackground.style.display = "block";
+        plausible('Newsletter-Subscribed')
+    }
 });
 
 function changeMobileMenuVisibility() {
