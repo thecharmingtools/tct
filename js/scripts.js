@@ -8,7 +8,6 @@
 // 
 
 window.addEventListener('DOMContentLoaded', event => {
-
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -27,7 +26,9 @@ window.addEventListener('DOMContentLoaded', event => {
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
+    document.addEventListener('scroll', () => {
+        navbarShrink()
+    });
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -102,6 +103,7 @@ function closeSubscribedAlert() {
 }
 
 window.onload = async () => {
+    let threeDaysAgo = getDateThreeDaysAgo();
     fetch('/data/liveDates.json').then(response => response.json()).then(
         async result => {
             if(result.nextDates.filter(date => date.active).length == 0) {
@@ -109,7 +111,9 @@ window.onload = async () => {
                 datesSection.style.display = 'none';
             }
 
-            for (let concert of result.nextDates) {
+            // Only show concerts in the future or no more in the past than three days.
+            let currentConcerts = result.nextDates.filter(concert => Date.parse(concert.date) > threeDaysAgo);
+            for (let concert of currentConcerts) {
                 setupLiveDate(concert)
             }
         }
@@ -156,4 +160,11 @@ function setupLiveDate(concert) {
 
 function loadJsonFile(location) {
 
+}
+
+function getDateThreeDaysAgo(date = new Date()) {
+    const previous = new Date(date.getTime());
+    previous.setDate(date.getDate() - 3);
+
+    return previous;
 }
