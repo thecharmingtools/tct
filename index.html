@@ -27,18 +27,6 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <script src="js/mailingList.js"></script>
-    <script>
-        window.onload = () => {
-            if(window.location.search.includes("subscribed")) {
-                let alert = document.getElementById("subscribed-alert")
-                alert.style.display = "block";
-
-                let alertBackground = document.getElementById("subscribed-alert-background")
-                alertBackground.style.display = "block";
-                plausible('Newsletter-Subscribed')
-            }
-        }
-    </script>
     <script defer data-domain="thecharmingtools.com" src="https://plausible.io/js/script.outbound-links.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     <script type="application/ld+json">
@@ -205,7 +193,6 @@
 </section>
 <!-- Portfolio-->
 <div id="photos" class="showcase">
-
     <div class="container-fluid p-0">
         <div class="row g-0 container-gallery">
             <div class="col-lg-4 col-sm-6">

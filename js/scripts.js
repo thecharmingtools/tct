@@ -43,9 +43,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
     
-    
-    // Temporarely trying to fix the notification.
-    
+
     if(window.location.search.includes("subscribed")) {
         let alert = document.getElementById("subscribed-alert")
         alert.style.display = "block";
@@ -89,7 +87,6 @@ function closeSubscribedAlert() {
     let alert = document.getElementById("subscribed-alert")
     let alertBackground = document.getElementById("subscribed-alert-background")
     for( child of alert.children) {
-        console.log(child)
         child.style.display = "none"
     }
 
