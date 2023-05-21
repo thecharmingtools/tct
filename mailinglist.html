@@ -116,6 +116,7 @@
 
     </style>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <script src="js/mailingList.js"></script>
     <script>
         function submitFormAndNavigate() {
             let mailInput = document.getElementById('EMAIL');
@@ -123,22 +124,6 @@
             let firstNameInput = document.getElementById('VORNAME');
             let firstName = firstNameInput.value;
             window.location.href = `/mailinglist-mobile.html?mail=${mailaddress}&firstname=${firstName}`;
-        }
-
-        function validateEmail() {
-            let signUpButton = document.getElementById('submit-btn')
-            let mailInput = document.getElementById('EMAIL');
-            let mailaddress = mailInput.value;
-
-            let mailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-            let isValidMailAddress = mailRegex.test(mailaddress);
-
-            if(isValidMailAddress) {
-                signUpButton.disabled = false
-            } else {
-                signUpButton.disabled = true
-            }
         }
     </script>
     <script defer data-domain="thecharmingtools.com" src="https://plausible.io/js/plausible.js"></script>

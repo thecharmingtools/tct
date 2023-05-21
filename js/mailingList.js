@@ -51,3 +51,23 @@ de
         alert("Something went wrong. Try again later.");
     }
 }
+
+function validateEmail() {
+    let signUpButton = document.getElementById('submit-btn') ?? document.getElementById('home-mail-submit-button')
+    let mailInput = document.getElementById('EMAIL') ?? document.getElementById('home-mail-input');
+    let mailaddress = mailInput.value;
+
+    let mailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    let isValidMailAddress = mailRegex.test(mailaddress);
+
+    if(isValidMailAddress) {
+        signUpButton.disabled = false
+        signUpButton.style.backgroundColor = "#226f54";
+        signUpButton.style.color = "white";
+    } else {
+        signUpButton.disabled = true
+        signUpButton.style.backgroundColor = "#e8ddb5";
+        signUpButton.style.color = "black";
+    }
+}
