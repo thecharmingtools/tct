@@ -35,7 +35,7 @@
     {
       "active": true,
       "date": "2023-07-02",
-      "time": "09:30",
+      "time": "10:00 & 11:30",
       "eventName": "Reithallen-Flohmi",
       "location": "Reitschule, Bern",
       "link": ""
@@ -43,10 +43,10 @@
     {
       "active": true,
       "date": "2023-07-29",
-      "time": "20:00",
+      "time": "18:30",
       "eventName": "KulturMatte",
       "location": "Weissenbühlquartier, Bern",
-      "link": ""
+      "link": "https://kulturmatte.ch"
     },
     {
       "active": true,

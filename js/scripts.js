@@ -131,6 +131,7 @@ function setupLiveDate(concert) {
     if(concert.link != "") {
         eventItem = document.createElement('a');
         eventItem.href = concert.link;
+        eventItem.target = "_blank";
     } else {
         eventItem = document.createElement('div')
     }
