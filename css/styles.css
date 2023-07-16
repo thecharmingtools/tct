@@ -11865,6 +11865,22 @@ html {
     margin-left: 1rem;
     border-left: 1px solid black;
   }
+
+  .header-logos {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .fs-header-logos {
+    font-size: 1.2rem !important;
+    color: white;
+  }
+
+  .navbar-shrink .fs-header-logos {
+    color: black;
+  }
 }
 
 @media (max-width: 992px) {
@@ -12105,5 +12121,9 @@ html {
 
   #spotlight {
     padding-top: 1rem;
+  }
+
+  .header-logos {
+    display: none;
   }
 }
