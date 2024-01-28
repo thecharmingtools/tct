@@ -104,17 +104,26 @@ window.onload = async () => {
     fetch('/data/liveDates.json').then(response => response.json()).then(
         async result => {
             if(result.nextDates.filter(date => date.active).length == 0) {
-                let datesSection = document.getElementById('dates');
-                datesSection.style.display = 'none';
+                hideNextDatesSection();
             }
 
             // Only show concerts in the future or no more in the past than three days.
-            let currentConcerts = result.nextDates.filter(concert => Date.parse(concert.date) > threeDaysAgo);
+            let currentConcerts = result.nextDates.filter(concert => Date.parse(concert.date) > getDateThreeDaysAgo());
+
+            if(currentConcerts.length == 0) {
+                hideNextDatesSection();
+            }
+
             for (let concert of currentConcerts) {
                 setupLiveDate(concert)
             }
         }
     )
+}
+
+function hideNextDatesSection() {
+    let datesSection = document.getElementById('dates');
+    datesSection.style.display = 'none';
 }
 
 function setupLiveDate(concert) {
