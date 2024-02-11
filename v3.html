@@ -124,7 +124,7 @@
                 <hr class="divider divider-light"/>
                 <div id="home-mail-form" class="mb-4">
                     <input id="home-mail-input" placeholder="Enter your E-Mail" oninput="validateEmail()"/>
-                    <button id="home-mail-submit-button" class="btn submit-btn" style="opacity: 1" onclick="submitSubscription()">Submit</button>
+                    <button id="home-mail-submit-button" class="btn submit-btn" style="opacity: 1" onclick="submitSubscription()">Join</button>
                 </div>
                 <p class="text-white-75 mb-4">Sign up to our mailing list to be the first to hear about our demos, song
                     releases and more!</p>
@@ -180,7 +180,12 @@
     <div class="container-fluid p-0">
         <div class="row g-0 container-gallery bg-primary">
             <div class="col-lg-4 col-sm-6">
-                <div class="gallery-element">
+                <div class="gallery-element d-block d-md-none">
+                    <div class="portfolio-box">
+                        <img class="img-fluid" src="assets/img/v3/DSC07371.jpg" alt="..." loading="lazy"/>
+                    </div>
+                </div>
+                <div class="gallery-element d-none d-md-block   ">
                     <div class="portfolio-box">
                         <img class="img-fluid" src="assets/img/v3/DSC07589.jpg" alt="..." loading="lazy"/>
                     </div>
@@ -210,10 +215,20 @@
 
             <div class="col-lg-4 col-sm-6  gallery-element-wrapper">
                 <div class="push-down"></div>
-                <div class="gallery-element">
+                <div class="gallery-element d-none d-md-block">
                     <div class="portfolio-box">
                         <img class="img-fluid" src="assets/img/v3/DSC07371.jpg" alt="..." loading="lazy"/>
                     </div>
+                </div>
+            </div>
+            <div class="gallery-element d-block d-md-none">
+                <div class="portfolio-box">
+                    <img class="img-fluid" src="assets/img/v3/header&profilbild_fix.jpg" alt="..." loading="lazy"/>
+                </div>
+            </div>
+            <div class="gallery-element d-block d-md-none">
+                <div class="portfolio-box">
+                    <img class="img-fluid" src="assets/img/v3/DSC07589.jpg" alt="..." loading="lazy"/>
                 </div>
             </div>
         </div>
