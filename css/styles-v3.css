@@ -11884,8 +11884,24 @@ html {
 }
 
 @media (max-width: 992px) {
-  #tct-masthead-container {
-    visibility: hidden;
+  .masthead {
+    min-height: 55vh;
+    position: relative;
+  }
+
+  #tct-masthead-container > div > div {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1.5em
+    /*visibility: hidden;*/
+  }
+
+  #tct-masthead {
+    font-size: 2em
+  }
+
+  #tct-masthead-container > div > div > a {
+    font-size: 1em !important;
   }
 
   .page-section {
