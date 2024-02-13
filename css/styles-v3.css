@@ -11616,6 +11616,11 @@ header.masthead h1, header.masthead .h1 {
         background-color: #e8ddb5;
     }
 
+  #mainNav.navbar-shrink #tct-header {
+    transition: filter 1s ease;
+    filter: invert(1);
+  }
+
   .showcase > .container-fluid {
     max-width: 90vw;
     margin-left: auto;
@@ -11673,10 +11678,10 @@ a {
 }
 
 #tct-header {
-  font-family: "Biasa", serif !important;
-  font-size: 2em;
-  font-weight: 900;
-  padding-top: 0;
+  width: 4rem;
+  position: absolute;
+  left: 0.4rem;
+  top: 0.4rem;
 }
 
 .tct-capital-c {
@@ -11933,6 +11938,12 @@ html {
     color: white
   }
 
+  #tct-header {
+    width: 5.2em;
+    left: 0.3rem;
+    top: 0.5rem;
+  }
+
 
   #mainNav .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -11946,11 +11957,6 @@ html {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #e8ddb5;
     transition: background-color 1s ease;
-  }
-
-  #mainNav.navbar-shrink #tct-header {
-    transition: color 1s ease;
-    color: #212529;
   }
 
 
