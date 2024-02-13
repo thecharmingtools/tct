@@ -11733,6 +11733,7 @@ a {
     top: 50%;
     position: relative;
     transform: translateY(-50%);
+    max-height: 100%;
 }
 
 .yt-spotlight  iframe {
