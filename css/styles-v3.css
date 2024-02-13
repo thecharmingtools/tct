@@ -11713,6 +11713,10 @@ a {
   font-weight: 900 !important;
 }
 
+#out-now-title {
+  width: 100%;
+}
+
 .yt-spotlight {
   height: calc(100vw/16*9);
   max-height: 19em;
@@ -11914,6 +11918,10 @@ html {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+  }
+
+  #out-now-title {
+    width: 80%;
   }
 
   #mainNav {
