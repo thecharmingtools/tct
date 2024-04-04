@@ -2,58 +2,26 @@
   "nextDates": [
     {
       "active": true,
-      "date": "2023-05-14",
-      "time": "13:00",
-      "eventName": "Das Gartenfest",
-      "location": "(privat), Bern",
-      "link": ""
-    },
-    {
-      "active": true,
-      "date": "2023-05-23",
-      "time": "18:30",
-      "eventName": "Swissrail Mobility Day",
-      "location": "Trafohalle Baden",
-      "link": ""
-    },
-    {
-      "active": true,
-      "date": "2023-05-26",
-      "time": "20:00",
-      "eventName": "Tag der Nachbarschaft",
-      "location": "Effingerquartier, Bern",
-      "link": ""
-    },
-    {
-      "active": true,
-      "date": "2023-06-16",
+      "date": "2024-04-24",
       "time": "19:30",
-      "eventName": "Sommernachtsfest",
-      "location": "Gaskessel, Bern",
-      "link": ""
+      "eventName": "Bestival",
+      "location": "Grosse Halle, Bern",
+      "link": "https://www.bestival.ch"
     },
     {
       "active": true,
-      "date": "2023-07-02",
-      "time": "10:00 & 11:30",
-      "eventName": "Reithallen-Flohmi",
-      "location": "Reitschule, Bern",
-      "link": ""
-    },
-    {
-      "active": true,
-      "date": "2023-07-29",
-      "time": "18:30",
-      "eventName": "KulturMatte",
-      "location": "Weissenbühlquartier, Bern",
-      "link": "https://kulturmatte.ch"
-    },
-    {
-      "active": true,
-      "date": "2023-10-27",
+      "date": "2024-04-26",
       "time": "20:00",
-      "eventName": "Alti Moschti",
-      "location": "Mühleturnen",
+      "eventName": "Showcase",
+      "location": "Polygon, Bern",
+      "link": ""
+    },
+    {
+      "active": true,
+      "date": "2024-07-17",
+      "time": "20:00",
+      "eventName": "Konzert unter der Linde",
+      "location": "Kulturhof, Köniz",
       "link": ""
     }
   ]
